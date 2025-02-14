@@ -1,0 +1,183 @@
+/* websites/src/styles/home.css */
+
+.home-container {
+  display: flex;
+  flex: 1;
+  gap: var(--padding-big);
+  overflow: hidden;
+}
+
+.home-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items:first baseline;
+  max-height: 100%;
+  overflow-y: hidden;
+}
+
+.home-right {
+  display: flex;
+  flex-direction: column;
+  width: 65%;
+  max-height: 100%;
+  padding: var(--padding-big) var(--padding-huge);
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  overflow-y: auto;
+}
+
+.home-left {
+  h3 {
+    padding: 0;
+    margin: 0;
+    color: var(--color-white);
+    font-family: var(--primary-font-family);
+    font-size: var(--fontsize-big);
+  }
+
+  select.date-dropdown {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 100%;
+    padding: var(--padding-tiny) var(--padding-normal);
+    margin: var(--padding-normal) 0;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="rgb(200, 168, 107)"><path d="M5 7l5 5 5-5H5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: var(--padding-large);
+    font-size: var(--fontsize-normal);
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  select.date-dropdown:hover {
+    background-color: var(--color-midnight-blue);
+  }
+
+  select.date-dropdown:focus {
+    outline: none;
+    background-color: var(--color-midnight-blue);
+  }
+
+  select.date-dropdown option {
+    background-color: var(--color-charcoal-blue);
+    color: var(--color-white);
+  }
+
+  select.date-dropdown option:focus {
+    background-color: var(--color-liturgical-gold);
+    color: var(--color-black);
+  }
+
+  p.scripture-reference {
+    padding: 0;
+    margin: 0;
+    margin-bottom: var(--padding-normal);
+    color: var(--color-liturgical-gold);
+    font-size: var(--fontsize-big);
+    font-weight: bold;
+  }
+
+  .scripture-card {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-shrink: 1;
+    width: 100%;
+    max-height: 100%;
+    aspect-ratio: 1/1.1083;
+    padding: 0;
+    margin: 0;
+    background: url("/img/card.png") no-repeat center center;
+    background-size: contain;
+    overflow: hidden;
+
+    .scripture-text {
+      position: absolute;
+      bottom: var(--padding-normal);
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      width: 60%;
+      max-height: 65%;
+      padding: 0;
+      margin: 0;
+      padding-left: var(--padding-tiny);
+      color: var(--color-black);
+      font-family: var(--secondary-font-family);
+      font-size: var(--fontsize-normal);
+      text-align: left;
+      overflow-y: auto;
+    }
+
+    .scripture-text p {
+      padding: 0;
+      margin: 0;
+      padding-right: var(--padding-small);
+      padding-bottom: var(--padding-normal);
+    }
+
+    .scripture-text p:last-child {
+      padding-bottom: 0;
+    }
+
+    ::-webkit-scrollbar {
+      width: 5px;
+      padding: 0;
+      margin: 0;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: var(--color-gray);
+      border-radius: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background-color: var(--color-sandstone-beige);
+    }
+  }
+}
+
+.home-right {
+  ::-webkit-scrollbar {
+    width: 100px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--color-liturgical-gold);
+    border-radius: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: var(--color-black);
+  }
+
+  h3 {
+    padding: 0;
+    margin: 0;
+    color: var(--color-liturgical-gold);
+    font-family: var(--primary-font-family);
+    font-size: var(--fontsize-large);
+  }
+
+  p {
+    padding: 0;
+    margin: 0;
+    padding-bottom: var(--padding-normal);
+    color: var(--color-white);
+    font-family: var(--secondary-font-family);
+    font-size: var(--fontsize-semi-large);
+    text-align: justify;
+  }
+
+  p:last-child {
+    padding-bottom: 0;
+  }
+}
