@@ -1,0 +1,35 @@
+/* src/styles/nav.css */
+
+.nav-container {
+  position: fixed;
+  top: var(--padding-huge);
+  right: var(--padding-huge);
+  display: flex;
+  gap: var(--padding-large);
+  padding: var(--padding-normal) var(--padding-large);
+  background-color: var(--color-black);
+  border-radius: 50px;
+  opacity: 0.75;
+  transition: opacity 0.3s;
+}
+
+.nav-container:hover {
+  opacity: 1;
+}
+
+.nav-link {
+  color: var(--color-white);
+  font-family: var(--primary-font-family);
+  font-size: var(--fontsize-semi-large);
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-link:nth-child(even) {
+  color: var(--color-liturgical-gold);
+}
+
+.nav-link:hover {
+  color: var(--color-moss-green);
+}
